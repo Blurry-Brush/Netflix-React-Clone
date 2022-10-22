@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import AuthContext from "../context/AuthContext";
+import SearchBar from "./SearchBar";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -16,12 +17,13 @@ const Navbar = () => {
   };
 
   return (
-    <div className="flex items-center justify-between p-4 z-[1000] w-full absolute">
+    <div className="flex items-center justify-between p-4 z-[1000] w-full absolute overflow-hidden">
       <Link to="/">
         <h1 className="text-red-600 text-4xl cursor-pointer font-bold">
           NETFLIX
         </h1>
       </Link>
+      <SearchBar/>
       {user?.email ? (
         <div>
           <Link to="/account">

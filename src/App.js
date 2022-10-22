@@ -6,6 +6,7 @@ import SignUp from "./Pages/SignUp";
 import Login from "./Pages/Login"
 import Account from "./Pages/Account"
 import ProtectedRoute from "./components/ProtectedRoute";
+import SearchResults from "./components/SearchResults";
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           <Route path="/signup" element={<SignUp/>} />
           <Route path="/login" element={<Login/>} />
           <Route path="/account" element={<ProtectedRoute><Account/></ProtectedRoute>}/>
+          <Route path="/show/:name" element={<SearchResults />} />
         </Routes>
       </AuthContextProvider>
     </>

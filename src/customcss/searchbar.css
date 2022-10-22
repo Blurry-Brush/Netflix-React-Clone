@@ -1,0 +1,7 @@
+.search-input {
+    display: none;
+}
+
+.search-container:hover .search-input {
+    display: block;
+}

@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import Requests from "../Requests";
 import { textVariant, imageVariant } from "../variants";
 import { motion, AnimatePresence } from "framer-motion";
+import SearchResults from "./SearchResults";
+
 
 const Main = () => {
   const [movies, setMovies] = useState([]);
@@ -21,7 +23,8 @@ const Main = () => {
       setIndex((index + 1) % movies.length);
     }, 5000);
     return () => clearInterval(interval);
-  });
+  },[index, movies.length]);
+  
 
   const truncateString = (str, num) => {
     if (str?.length > num) {
@@ -41,7 +44,8 @@ const Main = () => {
         exit="exit"
         className="w-full h-[600px] text-white"
       >
-        <motion.div className="w-full h-full">
+       
+        <motion.div className="w-full h-full -z-10">
           <motion.div className="w-full h-[600px] absolute bg-gradient-to-r from-black"></motion.div>
           <img
             className="w-full h-full object-cover"
