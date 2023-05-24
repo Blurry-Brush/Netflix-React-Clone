@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import Requests from "../Requests";
 import { textVariant, imageVariant } from "../variants";
 import { motion, AnimatePresence } from "framer-motion";
-import SearchResults from "./SearchResults";
+
 
 
 const Main = () => {
@@ -46,7 +46,7 @@ const Main = () => {
       >
        
         <motion.div className="w-full h-full -z-10">
-          <motion.div className="w-full h-[600px] absolute bg-gradient-to-r from-black"></motion.div>
+          <motion.div className="w-full h-[600px] absolute bg-gradient-to-r from-black "></motion.div>
           <img
             className="w-full h-full object-cover"
             src={`https://image.tmdb.org/t/p/original/${movie?.backdrop_path}`}

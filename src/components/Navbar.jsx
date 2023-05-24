@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import AuthContext from "../context/AuthContext";
-import SearchBar from "./SearchBar";
+// import SearchBar from "./SearchBar";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -23,7 +23,7 @@ const Navbar = () => {
           NETFLIX
         </h1>
       </Link>
-      <SearchBar/>
+      {/* <SearchBar/> */}
       {user?.email ? (
         <div>
           <Link to="/account">

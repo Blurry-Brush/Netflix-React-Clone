@@ -13,12 +13,12 @@ const SearchBar = () => {
   };
 
   return (
-    <motion.div className="absolute z-10 w-full flex justify-center">
+    <motion.div className="relative flex justify-center">
       <motion.div
         whileHover={{ width: "280px" }}
         whileFocus={{ width: "280px" }}
         transition={{ duration: 0.5 }}
-        className="h-10 bg-white/50 hover:pl-3 cursor-pointer search-container rounded-full w-[50px] max-w-xs flex justify-center items-center hover:justify-start"
+        className="h-10 bg-white/50 absolute z-[1000] top-16 lg:top-3 hover:pl-3 cursor-pointer search-container rounded-full w-[250px] lg:w-[50px] max-w-xs flex justify-center items-center hover:justify-start"
       >
         <button
           onClick={handleSearch}

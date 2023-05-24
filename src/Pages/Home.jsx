@@ -1,11 +1,13 @@
 import React from 'react'
 import Main from '../components/Main'
 import Row from '../components/Row'
+import SearchBar from '../components/SearchBar'
 import Requests from '../Requests'
 
 const Home = () => {
   return (
     <>
+        <SearchBar />
         <Main></Main>
         <Row rowId='1' title="UpComing" fetchURL={Requests.requestUpcoming} />
         <Row rowId='2' title="Popular" fetchURL={Requests.requestPopular} />

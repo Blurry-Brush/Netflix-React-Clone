@@ -3,7 +3,7 @@ import React from "react";
 const ResultCard = ({result}) => {
   return (
     <>
-      <div className="mb-4 card lg:card-side bg-gray-700 shadow-xl mx-24 lg:mx-44 hover:scale-105 duration-150 transition-all">
+      <div className="mb-4 card lg:card-side bg-gray-700 shadow-xl mx-20 lg:mx-44 hover:scale-105 duration-150 transition-all">
         <figure>
           <img src={`https://image.tmdb.org/t/p/w500/${result?.backdrop_path}`} alt="Album" />
         </figure>
